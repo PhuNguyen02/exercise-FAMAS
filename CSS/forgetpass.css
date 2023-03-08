@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #005555;
+}
+
+.container {
+  position: relative;
+}
+
+.container .title h1 {
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .container .title h1 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container .title h1 {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container .title h1 {
+    font-size: 90px;
+  }
+}
+
+.container .form_request_pass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 484px;
+  -webkit-transform: translate(-50%, 15%);
+          transform: translate(-50%, 15%);
+  width: 50%;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container .form_request_pass .title-form {
+  text-align: center;
+  color: #005555;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 2em;
+}
+
+.container .form_request_pass .field_email {
+  position: relative;
+  margin: 5px 40px;
+}
+
+.container .form_request_pass .field_email input {
+  height: 60px;
+  width: 100%;
+  padding: 0 5px;
+  border: 1px solid;
+  -webkit-transition: border-width 0.2s ease;
+  transition: border-width 0.2s ease;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.container .form_request_pass .send-email {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container .form_request_pass .send-email button {
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #005555;
+  color: white;
+  width: 30%;
+  height: 4rem;
+}
+/*# sourceMappingURL=forgetpass.css.map */

@@ -1,0 +1,408 @@
+@import "media";
+  body{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+  }
+  header{
+    .wraper-header{
+          background-color: #005555;
+          display: flex;
+          justify-content: space-between;
+          text-align: center;
+          @include xs{
+            padding:0 0px;
+          }
+          @include md{
+            padding: 10px 50px;
+          }
+          .logo{
+            padding: 25px 0;
+            text-align: center;
+            
+            h2{
+              a{
+                font-size: 30px;
+                color: white;
+              }
+            }
+          }
+          .input-search{
+            @include xs{
+              display: none;
+            }
+            @include sm{
+              display: none;
+            }
+            @include md{
+              display: block;
+            }
+            // justify-content: space-between;
+            padding: 25px;
+            input{
+              padding: 0.375rem 0.75rem;
+              border: 1px solid;
+              height: 40px;
+              width: 300px;
+              border-radius: 10px;
+              font-size: 16px;
+            }
+            button{
+              background-color: white;
+              height: 35px;
+              border-radius: 8px;
+              cursor: pointer;
+              position: relative;
+              outline: none;
+              padding: 8px 30px; 
+              overflow: hidden;
+              .text-btn{
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-weight: 800;
+                font-size: .8em;
+                transition: all .3s ease-in-out;
+              }
+                &:hover::before{
+                  opacity: 1; 
+                  transform: translate(0,0);
+                }
+                &::before{
+                  content: attr(data-hover);
+                  position: absolute;
+                  top: 0.7em; left: 0;
+                  width: 100%;
+                  text-transform: uppercase;
+                  letter-spacing: 3px;
+                  font-weight: 800;
+                  font-size: .8em;
+                  opacity: 0;
+                  transform: translate(-100%,0);
+                  transition: all .3s ease-in-out;
+                } 
+                &:hover div{
+                opacity: 0; 
+                transform: translate(100%,0)
+              }
+            }
+          }
+          .bars{
+            background: none;
+            font-size: 30px;
+            margin-right: 20px;
+            cursor: pointer;
+            color: white;
+            @include xs{
+              display: block;
+            }
+            @include sm{
+              display: block;
+            }
+            @include md{
+              display: none;
+            }
+          }
+          .none{
+            @include xs{
+              display: none;
+            }
+            @include sm{
+              display: none;
+            }
+            @include md{
+              display: block;
+            }
+          }
+        }
+        .menu{
+          background-color: #0f9d9d;
+          @include xs{
+            position: fixed;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: 0;
+            z-index: 90;
+            display: none;
+          }
+          @include sm{
+          position: fixed;
+          height: 100vh;
+          width: 200px;
+          top: 0;
+          right: 0;
+          z-index: 90;
+          display: none;
+          
+         }
+          @include md{
+          position: static;
+          z-index: 90;
+          width: 100%;
+          height: 100%;
+          display: block;
+          
+          }
+         ul{
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          @include xs{
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+          }
+          @include sm{
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+          }
+          @include md{
+           flex-direction: row;
+          text-align: center;
+          justify-content: center;
+          }
+          .close{
+            @include xs{
+              display: block;
+            }
+            @include sm{
+              display: block;
+            }
+            @include md{
+              display: none;
+            }
+            button{
+              background: none;
+            }
+            i{
+              font-size: 20px;
+              text-align: right;
+            }
+          }
+          li{
+            @include xs{
+              width: 100%;
+              padding: 10px 0;
+              margin: 0;
+              line-height: 20px;
+              position: relative;
+              &:hover{
+                background-color: #3aa9a9;
+                border-radius: 5px;
+              }
+            }
+            @include sm{
+              width: 100%;
+              padding: 10px 0;
+              margin: 0;
+              line-height: 20px;
+              position: relative;
+              &:hover{
+                background-color: #3aa9a9;
+                border-radius: 5px;
+              }
+            }
+            @include md{
+              width: 250px;
+              margin: 15px 0;
+              padding: 10px 15px;
+              position: relative;
+             &:hover{
+                background-color: #3aa9a9;
+                border-radius: 5px;
+              }
+              &:hover .sub-menu{
+                display: block;
+                margin-top: 15px;
+                margin-left: -15px;
+                z-index: 90;
+                position: absolute;
+                background-color: #0f9d9d;
+             }
+            }
+            a{
+              display: block;
+              color: white;
+              font-size: 18px;
+              font-weight: 600;
+              text-transform: uppercase;
+              @include xs{
+                font-size: 10px;
+              }
+              @include sm{
+                font-size: 10px;
+              }
+             }
+             &:hover .sub-menu{
+              display: block;
+              margin-top: 15px;
+              margin-left: -15px;
+              z-index: 90;
+              position: absolute;
+              background-color: #0f9d9d;
+           }
+             .sub-menu{
+               display: none;
+               @include xs{
+                position: absolute;
+                right: 200px;
+                top: -15px;
+              }
+              @include sm{
+                position: absolute;
+                right: 200px;
+                top: -15px;
+              }
+              @include md{
+                position: absolute;
+                right: 0;
+                top: 25px;
+              }
+               li{
+                 width: 250px;
+                 text-align: center;
+                 padding:25px 10px;
+                 border-bottom: 1px dotted white;
+                 border-radius: 0;
+                 &:last-child{
+                   border-bottom: 0;
+                 }
+                 a{
+                   display: block;
+                   &:hover{
+                     color: #f5ce62;
+                   }
+                 }
+                @include xs { 
+                  padding: 10px 0;
+                }
+                @include sm { 
+                  padding: 10px 0;
+                }
+               }
+               
+             }  
+           }
+         }
+        }
+  }
+  .container{
+    position: relative;
+  .wrapper{
+    transition-duration: 0.5s;
+    transition-timing-function: swing;
+    background-color: white;
+    width: 100%;
+    position: relative;
+    padding: 100px 0;
+    min-height: 920px;
+    .list-report{
+        .table-report{
+            border-spacing: 0;
+            width: 100%;
+            tbody{
+                tr{
+                    display: table-row;
+                    &:hover{
+                      cursor: pointer;
+                        background-color: gainsboro;
+                    }
+                    td{
+                       border-bottom: 1px solid gray;
+                       padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+  }  
+  }
+  footer{
+    @include xs {
+      display: none;
+    }
+    @include sm {
+      display: none;
+    }
+    @include md {
+      display: block;
+    }
+    margin-top: 50px;
+    width: 100%;
+    background-color: #005555;
+    padding: 0 100px;
+    .container{
+        .footer-container{    
+            display: flex;
+            justify-content: space-between;
+            .site-col{
+                .infobox{
+                    margin: 60px 0;
+                    .info-header{
+                        margin: 10px 0;
+                        color: white;
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                    .info-content{
+                        margin: 10px 0;
+                        .list{
+                            font-size: 20px;
+                            .li-list{
+                                padding-top: 20px;
+                                a{
+                                    color: white;
+                                    &:hover{
+                                        color: #25aae1;
+                                    }
+                                }
+                            }
+                        }
+                        .social-list{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            li{
+                                padding-top: 20px;
+                                margin-right: 30px;
+                                font-size: 25px;
+                                a{
+                                    color: white;
+                                    .fa-facebook-f{
+                                        &:hover{
+                                            color: #3B5998;
+                                        }
+                                    }
+                                    .fa-instagram{
+                                        &:hover{
+                                            color: rgb(131, 58, 180);
+                                        }
+                                    }
+                                    .fa-twitter{
+                                        &:hover{
+                                            color: rgb(29, 161, 242);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .coppy-right{
+        box-sizing: border-box;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 30px;
+        border-top: 1px solid white;
+        width: 100%;
+    }
+}
+  

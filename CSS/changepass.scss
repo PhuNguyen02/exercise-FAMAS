@@ -1,0 +1,67 @@
+@import "media";
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #005555;
+}
+.container{
+    position: relative;
+    .title{
+        
+            h1{
+                color: white;
+                text-align: center;
+                
+                @include xs{
+                    font-size: 60px;
+
+                  }
+                  @include sm{
+                    font-size: 70px;
+
+                  }
+                  @include md{
+                    font-size: 90px;
+                  }
+                    }
+    }
+    .form_change_pass{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 484px;
+        transform: translate(-50%, 15%);
+        width: 50%;
+        border-radius: 10px;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+       .field{
+        position: relative;
+        margin: 4rem 40px;
+        input{
+            height: 60px;
+            width: 100%;
+            padding: 0 5px;
+            border: 1px solid;
+            transition: border-width 0.2s ease;
+            border-radius: 2px;
+            font-size: 16px;
+        }
+       }
+        .Change-pass{  
+            text-align: center;
+            margin-top: 30px;
+            button{
+                font-size: 15px;
+                font-weight: 600;
+                background-color: #005555;
+                color: white;
+                width: 30%;
+                height: 4rem;
+            }
+        }
+    }
+
+}

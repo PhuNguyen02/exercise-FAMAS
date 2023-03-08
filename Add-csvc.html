@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm thiết bị</title>
+    <script></script>
+    <script src="https://kit.fontawesome.com/74c8b91a46.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/Add-csvc.css">
+</head>
+<body>
+  <header>
+    <div class="wraper-header">
+      <div class="logo">
+        <h2>
+          <a href="">FAMAS</a>
+        </h2>
+      </div>
+      <form action="" class="input-search">
+        <input type="text">
+        <button data-hover="Click me!" class="btn-search">
+         <div class="text-btn">
+          Search
+         </div> 
+        </button>
+      </form>
+      <button class="bars">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="none"></div>
+    </div>
+    <nav class="menu">
+        <ul>
+          <li class="close">
+            <button>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </li>
+           <li class="active"><a href="">Home</a></li>
+           <li><a href="">Tài khoản</a>
+          <ul class="sub-menu">
+            <li><a href="">Danh sách tài khoản</a></li>
+            <li><a href="">Thêm tài khoản</a></li>
+          </ul>
+          </li>
+           <li><a href="">Khoa</a>
+            <ul class="sub-menu">
+              <li><a href="">Khoa CNTT</a></li>
+              <li><a href="">Khoa Du lịch</a></li>
+            </ul>
+          </li>
+           <li><a href="">Báo cáo</a>
+            <ul class="sub-menu">
+              <li><a href="">Viết báo cáo</a></li>
+              <li><a href="">Đọc báo cáo</a></li>
+            </ul>
+          </li>
+          <li><a href="">Tài sản</a>
+            <ul class="sub-menu">
+              <li><a href="">Thống kê tài sản</a></li>
+              <li><a href="">Thêm tài sản</a></li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+  </header>
+    <div class="container">
+          <div class="wrapper">
+            <div class="title">
+              <h1>THÊM TÀI SẢN</h1>
+            </div>
+            <div class="wrapper-body">
+              <div class="info">
+                <img src="image/useravatar.png" alt="" class="avartar">
+                <h1>ADMIN</h1>
+                <p>Phu Nguyen</p>
+                <div class="menu">
+                  <ul>
+                    <li>
+                      <a href="changepass.html">Thay đổi mật khẩu</a>
+                    </li>
+                    <li>
+                      <a href="">Chỉnh sửa thông tin</a>
+                    </li>
+                    <li>
+                      <a href="">Đăng xuất</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <form class="Form">
+                  <table >
+                      <tr>
+                          <td class="col-1">Mã tài sản</td>
+                          <td class="col-2"><input  type="text"></td>
+                      </tr>
+                      <tr>
+                        <td class="col-1">Tên tài sản</td>
+                        <td class="col-2"><input  type="text"></td>
+                      </tr>
+                      <tr>
+                        <td class="col-1">Đơn vị tính</td>
+                        <td class="col-2"><input  type="text"></td>
+                      </tr>
+                      <tr>
+                        <td class="col-1">Khoa</td>
+                        <td class="col-2">
+                          <select >
+                            <option>--- Chọn khoa ---</option>
+                            <option value="Cntt" >Khoa CNTT</option>
+                            <option value="Dl">Khoa du lịch</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col-1">Phòng</td>
+                        <td class="col-2">
+                          <select >
+                            <option>--- Chọn phòng ---</option>
+                            <option value="101" >101</option>
+                            <option value="102">102</option>
+                            <option value="103" >103</option>
+                            <option value="104">104</option>
+                            <option value="105" >105</option>
+                            <option value="106">106</option>
+                            <option value="201" >201</option>
+                            <option value="202">202</option>
+                            <option value="301" >301</option>
+                            <option value="302">302</option>
+                            <option value="303" >Phòng thực hành 303</option>
+                            <option value="404">Phòng thính giảng 404</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col-1">Loại tài sản</td>
+                        <td class="col-2">
+                          <select >
+                            <option>--- Loại tài sản ---</option>
+                            <option value="MT" >Máy móc, Thiết bị</option>
+                            <option value="DC">Vật dụng, dụng cụ</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="col-1">Số lượng</td>
+                        <td class="col-2"><input  type="text"></td>
+                      </tr>
+                      <tr>
+                        <td class="col-1">Ngày thêm</td>
+                        <td class="col-2"><input  type="date"></td>
+                      </tr>
+                  </table>
+                    <div class="btn-click">
+                      <button>Thêm</button>
+                      <button>Nhập lại</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+    <footer>
+      <div class="container">
+          <div class="footer-container">
+             <div class="site-col">
+                 <div class="infobox">
+                     <div class="info-header">
+                          <p>Trợ giúp & Liên hệ</p>
+                     </div>
+                     <div class="info-content">
+                      <ul class="list">
+                          <li class="li-list">
+                              <a href="">Liên hệ</a>
+                          </li>
+                          <li class="li-list">
+                              <a href="">Trợ giúp</a>
+                          </li>
+                      </ul>
+                     </div>
+                 </div>
+             </div>
+             <div class="site-col">
+                 <div class="infobox">
+                     <div class="info-header">
+                      <P>Về FAMAS</P>
+                     </div>
+                     <div class="info-content">
+                      <ul class="list">
+                          <li class="li-list">
+                              <a href="">Về chúng tôi</a>
+                          </li>
+                          <li class="li-list">
+                              <a href="">Điều khoản sử dụng</a>
+                          </li>
+                          <li class="li-list">
+                              <a href="">Thông tin công ty</a>
+                          </li>
+                      </ul>
+                     </div>
+                 </div>
+             </div>
+             <div class="site-col">
+              <div class="infobox">
+                  <div class="info-header">
+                   <P>Connect with us</P>
+                  </div>
+                  <div class="info-content">
+                      <ul class="social-list">
+                          <li>
+                              <a href="">
+                                  <i class="fab fa-facebook-f"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="">
+                                  <i class="fab fa-instagram"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="">
+                                  <i class="fab fa-twitter"></i>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+         
+          </div>
+          <div class="coppy-right">
+              <P>COPYRIGHT @2022 FAMAS ALL RIGHTS RESERVED.</P>
+           </div>
+      </div>
+  </footer>
+  <script type="text/javascript" src="Js/dropdown-menu.js" ></script>
+</body>
+</html>
